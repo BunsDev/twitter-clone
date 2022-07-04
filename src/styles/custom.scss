@@ -1,0 +1,143 @@
+/* make the customizations */
+$primary: #3eaaee;
+// $secondary: rgb(26, 145, 218);
+// $primary: #55afb0;
+$dark: rgb(20, 23, 26);
+$light: rgb(241, 241, 241);
+// $dark: rgb(64, 64, 64);
+// $dark: rgb(53, 83, 87);
+$body-color: $dark;
+// $bg-color: rgb(245, 248, 250);
+$bg-color: lighten($primary, 39.5%);
+$text-muted: #657786;
+
+$card-bg: $bg-color;
+$card-border-radius: 1em;
+$card-border-width: 0;
+$card-cap-bg: $card-bg;
+$list-group-bg: transparent;
+$list-group-hover-bg: lighten($primary, 40%);
+$list-group-action-active-bg: lighten($primary, 39%);
+
+$input-bg: $bg-color;
+$input-border-width: 0;
+$input-btn-focus-width: 0;
+$input-padding-y: 0.15rem;
+$input-padding-x: 0.15rem;
+$input-font-size: 1.1em;
+$input-font-size-sm: 0.95em;
+$input-border-radius: 0;
+$input-group-addon-border-width: 0;
+
+$popover-border-width: 0;
+$popover-border-radius: 1em;
+$popover-max-width: 325px;
+$popover-min-width: 275px;
+
+$modal-content-border-width: 0;
+$modal-content-border-radius: 1em;
+$modal-header-border-width: 1px;
+$modal-dialog-margin-y-sm-up: 3em;
+$modal-dialog-margin: 0;
+$modal-sm: 375px;
+$modal-md: 550px;
+$modal-lg: 650px;
+
+$border-radius: 1em;
+
+$alert-border-radius: 0;
+$alert-color-level: -10;
+$alert-bg-level: -2;
+
+$progress-height: 3px;
+
+$badge-font-weight: 400;
+$badge-font-size: 0.7em;
+$badge-padding-y: 0.15em;
+$badge-padding-x: 0.35em;
+
+$btn-font-size-lg: 1.15rem;
+
+$btn-disabled-opacity: 0.5;
+
+$font-weight-bolder: 800;
+$overflows: auto, hidden, visible;
+$grid-gutter-width: 0;
+$enable-responsive-font-sizes: true;
+$container-max-widths: (
+  sm: 570px,
+  md: 720px,
+  lg: 990px,
+  xl: 1200px,
+);
+$theme-colors: (
+  "black": black,
+  "border-color": rgb(222, 226, 230),
+  "bg-color": $bg-color,
+);
+
+$spinner-width: 1.5rem;
+$spinner-border-width: 0.15em;
+
+$line-height-base: 1.3;
+
+// $link-color: blue;
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
+
+$input-group-addon-bg: $gray-300;
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-variant(white, $value, lighten($value, 40%), $value, lighten($value, 37.5%), $value);
+    color: $value !important;
+  }
+  .btn-outline {
+    @include button-variant(white, $value, lighten($value, 40%), $value, lighten($value, 37.5%), $value);
+  }
+  // custom button with no outline or fill
+  .btn-naked-#{$color} {
+    @include button-variant(white, transparent, lighten($value, 38%), transparent, lighten($value, 37.5%));
+    border: none;
+    background: transparent;
+    &:hover {
+      color: $value;
+    }
+    &:focus:not(:hover) {
+      // color: $value;
+      background: transparent;
+    }
+    &:not(:disabled):not(.disabled):active {
+      color: $value;
+    }
+    &:not(:disabled):not(.disabled).active {
+      color: $value;
+    }
+    &:not(:disabled):not(.disabled):not(:hover).active {
+      background-color: transparent;
+    }
+  }
+}
+@each $value in $overflows {
+  .overflow-y-#{$value} {
+    overflow-y: $value !important;
+  }
+  .overflow-x-#{$value} {
+    overflow-x: $value !important;
+  }
+}
+
+// // Option B: Include parts of Bootstrap
+
+// // Required
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+
+// // Optional
+// @import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/type";
+// @import "~bootstrap/scss/images";
+// @import "~bootstrap/scss/code";
+// @import "~bootstrap/scss/grid";
