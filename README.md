@@ -1,7 +1,7 @@
-## React front-end for tclone
+## React front-end for Twitter-Clone
 
 Try it [here](https://tclone.netlify.app)
-back-end repo [here](https://github.com/muzam1l/tclone-api)
+back-end repo [here](https://github.com/BunsDev/twitter-clone-api)
 
 ![Demo](./docs/tclone-demo2.gif)
 
