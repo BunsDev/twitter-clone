@@ -1,13 +1,13 @@
 ## React front-end for Twitter-Clone
 
-Try it [here](https://tclone.netlify.app)
+Try it [here](http://twitter-clone-bunsdev.vercel.app/)
 back-end repo [here](https://github.com/BunsDev/twitter-clone-api)
 
 ![Demo](./docs/tclone-demo2.gif)
 
 > _Kinda twitter,  noott_ 😊
 
-It is my own take on building Twitter clone, I have tried to keep things simple and concise. With minimal modules needed, it is very lightweight and fast, yet very functional and feature-rich, also improving consistently.
+It is my own take on building Twitter clone, I have tried to keep things simple and concise. With minimal modules needed, it is very lightweight and fast, yet functional and feature-rich.
 
 ## Things working ⚡
 
