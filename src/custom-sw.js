@@ -38,11 +38,11 @@ registerRoute(
 );
 // images cache first
 registerRoute(
-    ({ request, url }) => request.destination === 'image' && (url.origin === process.env.REACT_APP_API_SERVER),
-  /* ({ request, url }) =>
+    // ({ request, url }) => request.destination === 'image' && (url.origin === process.env.REACT_APP_API_SERVER),
+  ({ request, url }) =>
     request.destination === "image" &&
     (url.origin === process.env.REACT_APP_API_SERVER ||
-      url.origin === process.env.PUBLIC_URL), */
+      url.origin === process.env.PUBLIC_URL),
   new CacheFirst({
     cacheName: "images",
     plugins: [

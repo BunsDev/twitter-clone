@@ -75,7 +75,7 @@ class Login extends React.Component {
                     </Figure>
                 )}
                 <h5 className="font-weight-bolder mt-3">
-                    Login to see what’s happening in the muzamilverse right now
+                    Login to see what’s happening in the Twitterverse right now
                 </h5>
                 <fieldset disabled={disabled}>
                     <Form onSubmit={this.handleSubmit} >

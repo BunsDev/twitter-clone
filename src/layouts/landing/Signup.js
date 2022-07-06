@@ -62,7 +62,7 @@ class Signup extends React.Component {
                     </Figure.Caption>
                 </Figure>
                 <h5 className="font-weight-bolder">
-                    Signup to see what’s happening in the muzamilverse right now
+                    Signup to see what’s happening in the Twitterverse right meow.
                 </h5>
                 <fieldset disabled={disabled}>
                     <Form onSubmit={this.handleSubmit}>
